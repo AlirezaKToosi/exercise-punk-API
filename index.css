@@ -1,0 +1,70 @@
+/* index.css */
+
+body {
+    font-family: 'Protest Revolution', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  #beerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 200px; /* Decreased max-width */
+    max-height: 300px; /* Added max-height */
+  }
+  
+  #beerPhoto {
+    width: 100%;
+    height: auto;
+  }
+  
+  #beerName {
+    background-color: #f3f3f3;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  #beerInfo {
+    padding: 20px;
+  }
+  
+  #moreInfoButton {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
