@@ -19,15 +19,17 @@ footer {
 main {
   height: 80%;
 }
-
-.header {
+#randomPageView {
+  height: 100%;
+}
+#randomPageView .header {
   height: 10%;
   margin: 0;
   text-align: center;
   font-size: 2em;
 }
 
-#beerCard {
+#randomPageView #beerCard {
   margin: 0;
   height: 90%;
   width: 100%;
@@ -38,25 +40,25 @@ main {
   overflow: hidden;
 }
 
-#beerPhoto {
+#randomPageView #beerPhoto {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50%;
   height: 90%;
 }
-#beerPhoto img {
+#randomPageView #beerPhoto img {
   max-height: 50%;
 }
 
-#beerName {
+#randomPageView #beerName {
   text-align: center;
   font-size: 1em;
   height: 10%;
   width: 50%;
 }
 
-#beerInfo {
+#randomPageView #beerInfo {
   width: 50%;
   height: 90%;
   display: flex;
@@ -64,25 +66,25 @@ main {
   justify-content: center;
   align-content: center;
 }
-#beerInfo p {
+#randomPageView #beerInfo p {
   margin: 0;
   width: 80%;
   font-size: 1.5rem;
 }
 
-#moreInfoLink {
+#randomPageView #moreInfoLink {
   width: 50%;
   height: 10%;
 }
 
-#moreInfoLink a {
+#randomPageView #moreInfoLink a {
   color: #333;
   border: none;
   font-size: 1rem;
   text-align: left;
 }
 
-#moreInfoLink:hover {
+#randomPageView #moreInfoLink:hover {
   color: #555;
   font-size: 1.1rem;
 }

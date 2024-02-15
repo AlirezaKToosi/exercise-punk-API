@@ -18,4 +18,5 @@ async function fetchAndRenderBeers() {
     console.error("Error fetching pokemons:", error);
   }
 }
+document.getElementById('randomPageView').style.display = 'block';
 fetchAndRenderBeers();
