@@ -1,4 +1,5 @@
-async function fetchAndRenderBeers() {
+import { showBeerDetails } from "../js/moreInfoPage.js";
+async function fetchAndRenderRandomBeers() {
   try {
     const randomBeerCard = document.getElementById("beerCard");
     const randomBeerName = document.getElementById("beerName");
@@ -12,11 +13,14 @@ async function fetchAndRenderBeers() {
       randomBeerName.innerHTML = `<h2>${beer.name}</h2>`;
       randomBeerPhoto.innerHTML = `<img src="${beer.image_url}" alt="${beer.name}">`;
       randomBeerInfo.innerHTML = `<p>${beer.description}</p>`;
-      randomBeerLink.innerHTML = `<a href="#" onclick="showBeerDetails(${beer.id})" id="moreInfoLink">See more info ... </a>`;
+      randomBeerLink.innerHTML = `<a href="#" id="moreInfoLink">See more info ... </a>`;
+      randomBeerLink.addEventListener("click", () => showBeerDetails(beer.id));
     });
   } catch (error) {
     console.error("Error fetching pokemons:", error);
   }
 }
-document.getElementById('randomPageView').style.display = 'block';
-fetchAndRenderBeers();
+document.getElementById("randomPageView").style.display = "block";
+fetchAndRenderRandomBeers();
+
+

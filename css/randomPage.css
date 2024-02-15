@@ -1,6 +1,6 @@
 body,
 html {
-  font-family: "Protest Revolution", sans-serif;
+  font-family: "Ropa Sans", sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -11,9 +11,22 @@ footer {
   background-color: #333;
   color: #fff;
   height: 10%;
+}
+nav {
+  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -23,6 +36,7 @@ main {
   height: 100%;
 }
 #randomPageView .header {
+  font-family: "Protest Revolution", sans-serif;
   height: 10%;
   margin: 0;
   text-align: center;

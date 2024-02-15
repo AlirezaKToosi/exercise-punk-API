@@ -9,13 +9,23 @@
       href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Revolution&family=Ropa+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <title>Punk API</title>
     <link rel="stylesheet" href="css/randomPage.css" />
+    <link rel="stylesheet" href="css/moreInfoPage.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav>
+          <a href="index.html" id="homeLink">Home</a>
+          <a href="#" id="searchLink">Search</a>
+      </nav>
+    </header>
     <main>
-    <div id="randomPageView" style="display: none">
+      <div id="randomPageView" style="display: none">
         <h1 class="header">welcome to beer-wiki</h1>
         <section id="beerCard">
           <div id="beerPhoto"></div>
@@ -23,17 +33,13 @@
           <div id="beerInfo"></div>
           <div id="moreInfoLink"></div>
         </section>
-    </div>
+      </div>
 
-    <div id="searchPageView" style="display: none;">
-
-    </div>
-   <div id="moreInfoPageView" style="display: none;">
-
-    </div>
-  </main>
+      <div id="searchPageView" style="display: none"></div>
+      <div id="beerDetails" style="display: none"></div>
+    </main>
     <footer></footer>
 
-    <script src="index.js" type="module"></script>
+    <script src="js/randomPage.js" type="module"></script>
   </body>
 </html>
