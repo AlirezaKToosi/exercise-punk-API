@@ -1,4 +1,6 @@
 import { showBeerDetails } from "../js/moreInfoPage.js";
+
+
 async function fetchAndRenderRandomBeers() {
   try {
     const randomBeerCard = document.getElementById("beerCard");
@@ -20,7 +22,23 @@ async function fetchAndRenderRandomBeers() {
     console.error("Error fetching pokemons:", error);
   }
 }
-document.getElementById("randomPageView").style.display = "block";
+export function showView(viewId) {
+  switch (viewId) {
+    case 1:
+      document.getElementById("randomPageView").style.display = "block";
+      document.getElementById("beerDetails").style.display = "none";
+      document.getElementById("searchPageView").style.display = "none";
+      break;
+    case 2:
+      document.getElementById("randomPageView").style.display = "none";
+      document.getElementById("beerDetails").style.display = "grid";
+      document.getElementById("searchPageView").style.display = "none";
+      break;
+    default:
+      document.getElementById("randomPageView").style.display = "none";
+      document.getElementById("beerDetails").style.display = "none";
+      document.getElementById("searchPageView").style.display = "block";
+  }
+}
+showView(1);
 fetchAndRenderRandomBeers();
-
-

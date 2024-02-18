@@ -1,8 +1,9 @@
-async function showBeerDetails(beerId) {
-  document.getElementById("randomPageView").style.display = "none";
-  document.getElementById("beerDetails").style.display = "grid";
-  const beerDetailsContainer = document.getElementById("beerDetails");
+import { showView } from "../js/randomPage.js";
 
+async function showBeerDetails(beerId) {
+  showView(2);
+  const beerDetailsContainer = document.getElementById("beerDetails");
+  beerDetailsContainer.innerHTML = ``;
   try {
     const response = await fetch(`https://api.punkapi.com/v2/beers/${beerId}`);
     const beer = await response.json();
@@ -26,21 +27,13 @@ async function showBeerDetails(beerId) {
     ingredients.innerHTML = `
           <h2>Ingredients</h2>
           <p>Yeast:<br> ${beer[0].ingredients.yeast}</p>
+          <br>
           <h3>Malt</h3>
           <ul>
               ${beer[0].ingredients.malt
                 .map(
                   (malt) =>
                     `<li>${malt.name} - ${malt.amount.value} ${malt.amount.unit}</li>`
-                )
-                .join("")}
-          </ul>
-          <h3>Hops</h3>
-          <ul>
-              ${beer[0].ingredients.hops
-                .map(
-                  (hop) =>
-                    `<li>${hop.name} - ${hop.amount.value} ${hop.amount.unit} (${hop.add}, ${hop.attribute})</li>`
                 )
                 .join("")}
           </ul>
